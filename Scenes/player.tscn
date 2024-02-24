@@ -419,11 +419,24 @@ animations = [{
 script = ExtResource("1_n066c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 0.56)
+scale = Vector2(0.48, 0.48)
 shape = SubResource("CircleShape2D_g2sbh")
 
+[node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 575
+limit_bottom = 325
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.42109e-14, -9)
+position = Vector2(-1, -18)
 scale = Vector2(1.14583, 1.16667)
 sprite_frames = SubResource("SpriteFrames_3pyf4")
 animation = &"side_walk"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
