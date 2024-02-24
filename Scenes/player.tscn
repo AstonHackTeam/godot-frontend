@@ -1,7 +1,9 @@
-[gd_scene load_steps=55 format=3 uid="uid://eng7su33g582"]
+[gd_scene load_steps=56 format=3 uid="uid://eng7su33g582"]
 
 [ext_resource type="Texture2D" uid="uid://c2vl0q6ab6nfi" path="res://sprites/characters/player.png" id="1_35xqe"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_n066c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2sbh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e47a6"]
 atlas = ExtResource("1_35xqe")
@@ -417,7 +419,11 @@ animations = [{
 script = ExtResource("1_n066c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("CircleShape2D_g2sbh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.42109e-14, -9)
+scale = Vector2(1.14583, 1.16667)
 sprite_frames = SubResource("SpriteFrames_3pyf4")
 animation = &"side_walk"
