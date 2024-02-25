@@ -424,6 +424,6 @@ shape = SubResource("CircleShape2D_g2sbh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.42109e-14, -9)
-scale = Vector2(1.14583, 1.16667)
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_3pyf4")
-animation = &"side_walk"
+animation = &"front_idle"
