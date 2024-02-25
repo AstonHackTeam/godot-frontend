@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dho27rg6sxl8n"]
+[gd_scene load_steps=12 format=3 uid="uid://dho27rg6sxl8n"]
 
 [ext_resource type="Texture2D" uid="uid://dcnhpiwobup15" path="res://art/dungeon_ v1.0/dungeon_.png" id="2_61kc4"]
 [ext_resource type="Texture2D" uid="uid://or6wtfcqso6l" path="res://Scenes/download.png" id="2_fcf84"]
 [ext_resource type="Texture2D" uid="uid://citihxuca6mtd" path="res://art/dungeon_ v1.0/dungeonDecoration_0.png" id="3_s2i31"]
 [ext_resource type="PackedScene" uid="uid://eng7su33g582" path="res://Scenes/player.tscn" id="4_pnfg3"]
 [ext_resource type="Texture2D" uid="uid://cxcj2lhr3kt4q" path="res://art/dungeon_ v1.0/dungeonDecoration_1.png" id="8_lnedg"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_6553y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvuk2"]
 texture = ExtResource("2_61kc4")
@@ -2371,6 +2373,13 @@ shadow_enabled = true
 shadow_color = Color(0, 0, 0, 1)
 texture = ExtResource("2_fcf84")
 texture_scale = 0.85
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="Player2"]
+stream = SubResource("AudioStreamMicrophone_6553y")
+autoplay = true
+bus = &"Record"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Player2"]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
