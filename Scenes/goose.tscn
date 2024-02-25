@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://dl2tcjmtunwco"]
+[gd_scene load_steps=22 format=3 uid="uid://dl2tcjmtunwco"]
 
 [ext_resource type="Script" path="res://Scripts/goose.gd" id="1_ydqq4"]
 [ext_resource type="Texture2D" uid="uid://dnmcg4fwjkwu1" path="res://sprites/characters/goose.png" id="2_vd5l5"]
+[ext_resource type="VideoStream" path="res://Scenes/aot.ogv" id="3_1d55i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2a4pt"]
 atlas = ExtResource("2_vd5l5")
@@ -144,5 +145,20 @@ shape = SubResource("CircleShape2D_g2sbh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sfxsv")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+top_level = true
+z_index = 5
+y_sort_enabled = true
+clip_contents = true
+layout_direction = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_1d55i")
+volume_db = 5.0
+buffering_msec = 100
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

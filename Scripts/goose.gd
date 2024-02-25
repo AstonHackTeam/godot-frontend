@@ -18,3 +18,4 @@ func _on_area_2d_body_entered(body):
 func open_youtube_link():
 	OS.shell_open("https://www.youtube.com/watch?v=p-LvUa_gNlQ")
 	get_tree().quit()
+
