@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-const speed = 100
+var speed = 100
 const voice_speed = 3000
 var curr_dir = "none"
+var player = null
+var found = false
 
 var effect
 var recording
@@ -22,9 +24,11 @@ func _ready():
 	effect.set_recording_active(true)
 	record_count = 0
 	record_timer.start()
-
+	
 func _physics_process(delta):
 	player_movement(delta)
+	if found:
+		speed = 0
 
 func player_movement(delta):
 		

@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dl2tcjmtunwco"]
+[gd_scene load_steps=21 format=3 uid="uid://dl2tcjmtunwco"]
 
+[ext_resource type="Script" path="res://Scripts/goose.gd" id="1_ydqq4"]
 [ext_resource type="Texture2D" uid="uid://dnmcg4fwjkwu1" path="res://sprites/characters/goose.png" id="2_vd5l5"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_g2sbh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2a4pt"]
 atlas = ExtResource("2_vd5l5")
@@ -117,17 +116,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2sbh"]
+radius = 52.3308
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sfxsv"]
+radius = 6.08276
+
 [node name="goose" type="CharacterBody2D"]
 y_sort_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-y_sort_enabled = true
-position = Vector2(0, 0.56)
-scale = Vector2(0.48, 0.48)
-shape = SubResource("CircleShape2D_g2sbh")
+script = ExtResource("1_ydqq4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11.765)
 sprite_frames = SubResource("SpriteFrames_nsscj")
 animation = &"idle"
-frame_progress = 0.332634
+frame_progress = 0.31299
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+y_sort_enabled = true
+position = Vector2(0, 0.56)
+scale = Vector2(0.48, 0.48)
+shape = SubResource("CircleShape2D_g2sbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sfxsv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

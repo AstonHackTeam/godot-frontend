@@ -418,6 +418,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 3
 script = ExtResource("1_n066c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -433,6 +434,7 @@ sprite_frames = SubResource("SpriteFrames_3pyf4")
 animation = &"front_idle"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+y_sort_enabled = true
 energy = 0.35
 texture = ExtResource("3_v0gvl")
 texture_scale = 0.8
