@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dho27rg6sxl8n"]
+[gd_scene load_steps=12 format=3 uid="uid://dho27rg6sxl8n"]
 
 [ext_resource type="Texture2D" uid="uid://dcnhpiwobup15" path="res://art/dungeon_ v1.0/dungeon_.png" id="2_61kc4"]
 [ext_resource type="Texture2D" uid="uid://citihxuca6mtd" path="res://art/dungeon_ v1.0/dungeonDecoration_0.png" id="3_s2i31"]
 [ext_resource type="PackedScene" uid="uid://eng7su33g582" path="res://Scenes/player.tscn" id="4_pnfg3"]
 [ext_resource type="PackedScene" uid="uid://dl2tcjmtunwco" path="res://Scenes/goose.tscn" id="6_8f77n"]
-[ext_resource type="Script" path="res://Scripts/goose.gd" id="7_0dlnp"]
 [ext_resource type="Texture2D" uid="uid://cxcj2lhr3kt4q" path="res://art/dungeon_ v1.0/dungeonDecoration_1.png" id="8_lnedg"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_6553y"]
@@ -2544,4 +2543,3 @@ occluder = SubResource("OccluderPolygon2D_ctd5e")
 
 [node name="goose" parent="." instance=ExtResource("6_8f77n")]
 position = Vector2(545, 16)
-script = ExtResource("7_0dlnp")

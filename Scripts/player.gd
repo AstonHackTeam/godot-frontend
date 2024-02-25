@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 100
+var speed = 300
 const voice_speed = 3000
 var curr_dir = "none"
 var player = null
@@ -18,7 +18,7 @@ func _ready():
 	var idx = AudioServer.get_bus_index("Record")
 	effect = AudioServer.get_bus_effect(idx, 0)
 	record_timer = Timer.new()
-	record_timer.wait_time = 2.0 # 设置定时器每秒触发一次
+	record_timer.wait_time = 1.5 # 设置定时器每秒触发一次
 	record_timer.connect("timeout", _on_record_timer_timeout)
 	add_child(record_timer) # 将定时器添加为子节点，确保能够被正确管理和释放
 	effect.set_recording_active(true)
