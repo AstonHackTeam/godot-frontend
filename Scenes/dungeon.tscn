@@ -353,6 +353,7 @@ sources/1 = SubResource("TileSetAtlasSource_3pybm")
 sources/2 = SubResource("TileSetAtlasSource_qvo7i")
 
 [node name="Dungeon" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_48r2e")
