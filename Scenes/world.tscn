@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dho27rg6sxl8n"]
+[gd_scene load_steps=12 format=3 uid="uid://dho27rg6sxl8n"]
 
 [ext_resource type="Texture2D" uid="uid://dcnhpiwobup15" path="res://art/dungeon_ v1.0/dungeon_.png" id="2_61kc4"]
 [ext_resource type="Texture2D" uid="uid://citihxuca6mtd" path="res://art/dungeon_ v1.0/dungeonDecoration_0.png" id="3_s2i31"]
@@ -602,8 +602,8 @@ sources/3 = SubResource("TileSetAtlasSource_lvuk2")
 sources/5 = SubResource("TileSetAtlasSource_xoihi")
 sources/6 = SubResource("TileSetAtlasSource_086vu")
 
-[node name="world" type="Node2D"]
-position = Vector2(288, 158)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wg2sm"]
+polygon = PackedVector2Array(-211, -75, -205, -79, -196, -79, -193, -76, -188, -70, -189, -64, -193, -62, -198, -63, -204, -61, -209, -65, -213, -64)
 
 [node name="Player2" parent="." instance=ExtResource("4_pnfg3")]
 position = Vector2(64, -220)
